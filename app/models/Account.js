@@ -15,4 +15,4 @@ var accountSchema = mongodbSchema ({
   carMiles: {type: Number, required: true}
 });
 
-module.exports = mongodb.model ('account', accountSchema);
+module.exports = mongodb.model ('account', accountSchema, 'accounts');
