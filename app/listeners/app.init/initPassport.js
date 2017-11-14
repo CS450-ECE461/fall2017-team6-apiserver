@@ -11,7 +11,8 @@
  * can load it into Passport.js here.
  */
 
-// const passport = require('passport');
+// eslint-disable-next-line
+const passport = require('passport');
 
 module.exports = function(app) {
 

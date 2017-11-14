@@ -1,5 +1,5 @@
 module.exports = exports = {
   '/account/login': {
-    post: {action: 'AccountController@login'},
+    post: {action: 'LoginController@login'},
   },
 };
