@@ -1,7 +1,8 @@
-var mongodb = require ('@onehilltech/blueprint-mongodb')
+const mongodb = require('@onehilltech/blueprint-mongodb')
   ;
 
-var accountSchema = mongodbSchema ({
+const SCHEMA_NAME = 'account';
+const schema = new mongodb.Schema({
   username: {type: String, required: true},
   password: {type: String, required: true},
   first_name: {type: String, required: true},
@@ -11,8 +12,8 @@ var accountSchema = mongodbSchema ({
   phoneNumber: {type: String, required: true},
   gender: {type: String, required: true},
   carModel: {type: String, required: true},
-  carMake: {type: String, required: true},}
-  carMiles: {type: Number, required: true}
+  carMake: {type: String, required: true},
+  carMiles: {type: Number, required: true},
 });
 
-module.exports = mongodb.model ('account', accountSchema, 'accounts');
+module.exports = mongodb.resource(SCHEMA_NAME, schema, SCHEMA_NAME + 's');
