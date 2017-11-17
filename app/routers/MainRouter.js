@@ -1,4 +1,4 @@
-module.exports = exports = {
+smodule.exports = exports = {
   '/dashboard' : { //should get the account
     resource: {
       controller: "AccountController"
@@ -8,6 +8,12 @@ module.exports = exports = {
   '/create' : {
     resource: {
       controller: "AccountController"
+    }
+  }
+
+  '/mechanic' : {
+   resource: {
+     controller: "MechanicController"
     }
   }
 };
