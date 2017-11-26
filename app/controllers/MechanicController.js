@@ -1,11 +1,13 @@
-var blueprint = require ('@onehilltech/blueprint')
-  , mongodb   = require ('@onehilltech/blueprint-mongodb')
-  , ResourceController = mongodb.ResourceController
-  , Mechanic   = require ('../models/Mechanic')
-  ;
+const blueprint = require('@onehilltech/blueprint');
+const mongodb = require('@onehilltech/blueprint-mongodb');
+const ResourceController = mongodb.ResourceController;
+const Mechanic = require('../models/Mechanic');
 
-function MechanicController () {
-   ResourceController.call(this, {model: Mechanic});
+class MechanicController {
+  constructor() {
+    ResourceController.call(this, {model: Mechanic});
+  }
 }
 
-blueprint.controller (MechanicController, ResourceController);
+blueprint.controller(MechanicController, ResourceController);
+module.exports = exports = MechanicController;

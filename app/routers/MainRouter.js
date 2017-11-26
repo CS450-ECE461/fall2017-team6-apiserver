@@ -1,19 +1,19 @@
-smodule.exports = exports = {
-  '/dashboard' : { //should get the account
+module.exports = exports = {
+  '/dashboard': { // should get the account
     resource: {
-      controller: "AccountController"
-    }
-  }
- 
-  '/create' : {
-    resource: {
-      controller: "AccountController"
-    }
-  }
+      controller: 'AccountController',
+    },
+  },
 
-  '/mechanic' : {
+  '/create': {
+    resource: {
+      controller: 'AccountController',
+    },
+  },
+
+  '/mechanic': {
    resource: {
-     controller: "MechanicController"
-    }
-  }
+     controller: 'MechanicController',
+    },
+  },
 };
