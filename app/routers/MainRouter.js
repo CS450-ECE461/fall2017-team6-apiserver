@@ -1,6 +1,19 @@
-module.exports = exports = {
-  '/helloworld' : {
-    get  : { view   : 'helloworld.pug' },
-    post : { action : 'HelloWorldController@echoName'},
+smodule.exports = exports = {
+  '/dashboard' : { //should get the account
+    resource: {
+      controller: "AccountController"
+    }
+  }
+ 
+  '/create' : {
+    resource: {
+      controller: "AccountController"
+    }
+  }
+
+  '/mechanic' : {
+   resource: {
+     controller: "MechanicController"
+    }
   }
 };

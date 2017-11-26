@@ -1,6 +1,6 @@
 'use strict';
 
-var blueprint = require ('@onehilltech/blueprint')
+const blueprint = require('@onehilltech/blueprint')
   ;
 
 module.exports = {
@@ -8,20 +8,20 @@ module.exports = {
     $default: {
       connstr: 'mongodb://alexhicks.net/team-6_' + blueprint.env,
 
-      options : {
+      options: {
         db: {
           native_parser: true,
-          read_preference: "primary",
+          read_preference: 'primary',
           forceServerObjectId: false,
-          w: 1
+          w: 1,
         },
         server: {
           auto_reconnect: true,
           keepAlive: 1,
           poolSize: 5,
-          socketOptions: {}
-        }
-      }
-    }
-  }
+          socketOptions: {},
+        },
+      },
+    },
+  },
 };

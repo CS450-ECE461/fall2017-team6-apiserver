@@ -1,20 +1,20 @@
 module.exports = exports = {
-  protocols : {
-    http : {
-      port: 5000
-    }
+  protocols: {
+    http: {
+      port: 5000,
+    },
   },
 
-  middleware : {
-    validator  : { },
-    bodyParser : {
-      urlencoded : { extended: false },
-      json : { }
+  middleware: {
+    validator: { },
+    bodyParser: {
+      urlencoded: {extended: false},
+      json: { },
     },
 
     morgan: {
       format: 'dev',
-      immediate: true
-    }
-  }
+      immediate: true,
+    },
+  },
 };
