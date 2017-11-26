@@ -6,6 +6,7 @@ class ChatSession {
 
   getResponse(input) {
     let message = '';
+    this.currentStage++;
     switch (this.currentStep) {
       case 0:
         if (input.includes(' steer ')) {
