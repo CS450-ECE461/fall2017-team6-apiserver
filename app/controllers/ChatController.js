@@ -22,6 +22,9 @@ class ChatController {
       // very basic structure
       const sessionId = req.query.sessionId;
       const input = req.query.message;
+      if (!userSessions[sessionId]) {
+        return res.status(404).send('');
+      }
       res.json({
         response: userSessions[sessionId].getResponse(input),
       });
@@ -29,5 +32,5 @@ class ChatController {
   }
 }
 
-blueprint.controller(ChatController, blueprint.BaseController);
+blueprint.controller(ChatController);
 module.exports = exports = ChatController;
