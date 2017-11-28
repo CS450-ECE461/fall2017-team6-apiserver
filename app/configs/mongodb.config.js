@@ -6,7 +6,7 @@ const blueprint = require('@onehilltech/blueprint')
 module.exports = {
   connections: {
     $default: {
-      connstr: 'mongodb://alexhicks.net/team-6_' + blueprint.env,
+      connstr: 'mongodb://clam.alexhicks.net/team-6_' + blueprint.env,
 
       options: {
         db: {
