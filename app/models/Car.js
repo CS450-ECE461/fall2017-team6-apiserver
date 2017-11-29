@@ -1,7 +1,7 @@
-var mongdb = require("@onehilltech/blueprint-mongodb")
+var mongodb = require("@onehilltech/blueprint-mongodb")
   ;
 
-var carSchema = mongodbSchema ({
+var carSchema = mongodb.Schema ({
   carMake: {type: String, required: true},
   carModel: {type: String, required: true},
   carMiles: {type: Number, required: true}

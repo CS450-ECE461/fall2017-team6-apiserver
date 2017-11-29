@@ -1,7 +1,7 @@
 var mongodb = require ("@onehilltech/blueprint-mongodb")
   ;
 
-var diagonsticSchema = new Schema ({
+var diagonsticSchema = mongodb.Schema ({
   problem: {type: String, required: true}, 
   weather: {type: String, required: true},
   drivingCond: {type: String, required: true},
