@@ -9,3 +9,4 @@ function DiagnosticController () {
 }
 
 blueprint.controller (DiagnosticController, ResourceController);
+module.exports = exports = DiagnosticController;
