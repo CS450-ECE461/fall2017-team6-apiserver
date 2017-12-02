@@ -1,11 +1,7 @@
 'use strict';
 
 const blueprint = require ('@onehilltech/blueprint')
-  , path      = require ('path')
-  , async     = require ('async')
-  , util      = require ('util')
   , expect = require ('chai').expect
-  , _         = require ('underscore')
   , lib       = require ('@onehilltech/blueprint/lib')
   , testing   = lib.testing
   ;
@@ -13,39 +9,21 @@ const blueprint = require ('@onehilltech/blueprint')
 describe ("MongoDB Test", function () {
   var user;
 
-  describe("/users", function () {
+  describe("/account", function () {
     describe ("POST", function () {
       it ("it should create a user", function (done) {
-        var dob = new Date().toISOString();
 	var data = {
 	  user: {
-	    first_name: "Cory", last_name: "Lehnert", email: "corylehnert@no-replay.com", 
-	    birthday: dob, phone_number: "123-456-7890", gender: "Male",
-	    cars: [{
-		carMake: "Toyota",
-		carModel: "Camry",
-		carMiles: 132000
-	          }],
-	    _id: '0'
+	    first_name: 'Cory', last_name: 'Lehnert', email: 'corylehnert@no-replay.com', 
+	    birthday: new Date(), phoneNumber: '123-456-7890', gender: 'Male', carMake: 'Toyota',
+	    carModel: 'Camry', carMiles: new Number(132000), _id: '4'
 	  }
         };
-       blueprint.testing.request()
-        .post("/users")
+       blueprint.testing.request('http://localhost:5000')
+        .post('/account')
         .send(data)
-        .expect(200)
-        .end (function (err, res) {
-          if (err) return done (err);
-          
-          expect (res.headers).to.have.property('last-modified');
-  
-          user = res.body.user;
-          data.user._id = user._id;
-          data.user.
-          
-          expect (res.body.user).to.deep.equal (data.user);
-          return done (null);
-          }, done);
-        });
+        .expect(200, done);
       });
-   });
+    });
+  });
 });
