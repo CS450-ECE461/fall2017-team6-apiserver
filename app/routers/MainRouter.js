@@ -1,19 +1,19 @@
 module.exports = exports = {
-  '/account' : { //should get the account
+  '/account': { // should get the account
     resource: {
-      controller: "UserController"
-    }
-  }
+      controller: 'UserController',
+    },
+  },
 
-  '/mechanic' : { //for accessing the mechanic's info page
-   resource: {
-     controller: "MechanicController"
-    }
-  }
+  '/mechanic': { // for accessing the mechanic's info page
+    resource: {
+      controller: 'MechanicController',
+    },
+  },
 
- '/diagnostic' : { // for accessing diagnostic requests
-   resource: {
-    controller: "DiagnosticController"
-    }
-  }
+  '/diagnostic': { // for accessing diagnostic requests
+    resource: {
+      controller: 'DiagnosticController',
+    },
+  },
 };

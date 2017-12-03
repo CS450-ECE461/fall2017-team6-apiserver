@@ -1,8 +1,8 @@
-var mongodb = require ("@onehilltech/blueprint-mongodb")
-  ;
+const mongodb = require('@onehilltech/blueprint-mongodb');
 
-var diagonsticSchema = mongodb.Schema ({
-  problem: {type: String, required: true}, 
+// eslint-disable-next-line
+const diagnosticSchema = mongodb.Schema({
+  problem: {type: String, required: true},
   weather: {type: String, required: true},
   drivingCond: {type: String, required: true},
   engineTemp: {type: String, required: true},
@@ -10,7 +10,8 @@ var diagonsticSchema = mongodb.Schema ({
   fuelType: {type: String, required: true},
   fuelBrand: {type: String, required: false},
   milesAt: {type: String, required: true},
-  occurRate: {type: String, required: true}
+  occurRate: {type: String, required: true},
 });
 
-module.exports = mongodb.model("diagnostic", diagonsticSchema, "diagnostics");
+module.exports = exports = mongodb.resource(
+  'diagnostic', diagnosticSchema, 'diagnostics');

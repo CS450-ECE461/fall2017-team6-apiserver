@@ -1,11 +1,10 @@
-var blueprint = require ('@onehilltech/blueprint')
-  , mongodb   = require ('@onehilltech/blueprint-mongodb')
-  , ResourceController = mongodb.ResourceController
-  , Diagnostic   = require ('../models/Diagnostic')
-  ;
+const blueprint = require('@onehilltech/blueprint');
+const mongodb = require('@onehilltech/blueprint-mongodb');
+const ResourceController = mongodb.ResourceController;
+const Diagnostic = require('../models/Diagnostic');
 
-function DiagnosticController () {
+function DiagnosticController() {
   ResourceController.call(this, {model: Diagnostic});
 }
 
-blueprint.controller (DiagnosticController, ResourceController);
+blueprint.controller(DiagnosticController, ResourceController);

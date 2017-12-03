@@ -7,4 +7,5 @@ const mechanicSchema = mongodb.Schema({
   bio: {type: String, required: true},
 });
 
-module.exports = mongodb.resource('mechanic', mechanicSchema, 'mechanics');
+module.exports = exports = mongodb.resource(
+  'mechanic', mechanicSchema, 'mechanics');

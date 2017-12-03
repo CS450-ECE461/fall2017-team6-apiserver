@@ -23,7 +23,7 @@ What does the tire pressure read on your dashboard?`;
           break;
         }
       default: message = `I'm not quite sure what you mean. Could you try to
- rephrase, please?`;
+rephrase, please?`;
     }
     this.currentStage++;
     return message.replace(/\n/g, ' ').replace(/\/\//g, '\n');
