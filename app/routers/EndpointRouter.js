@@ -1,10 +1,9 @@
 // app/routers/EndpointRouter.js
-const blueprint = require('@onehilltech/blueprint')
-  ;
+const cors = require('cors');
 
 module.exports = exports = {
-  '/gatekeeper': blueprint('router://@onehilltech/gatekeeper:v1'),
-  '/v1': {
-    policy: 'gatekeeper.auth.bearer',
-  },
+  '/v1': cors({
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    origin: '*',
+  }),
 };

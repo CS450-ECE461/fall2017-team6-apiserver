@@ -12,6 +12,7 @@
     "@onehilltech/blueprint": "^3.2.0",
     "@onehilltech/blueprint-mongodb": "^0.35.7",
     "@onehilltech/gatekeeper": "^0.66.11",
+    "cors": "^2.8.4",
     "randomstring": "^1.1.5"
   },
   "devDependencies": {
