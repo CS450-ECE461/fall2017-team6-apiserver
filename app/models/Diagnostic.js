@@ -13,4 +13,4 @@ var diagonsticSchema = mongodb.Schema ({
   occurRate: {type: String, required: true}
 });
 
-module.exports = mongodb.model("diagnostic", diagonsticSchema, "diagnostics");
+module.exports = mongodb.resource("diagnostic", diagonsticSchema, "diagnostics");

@@ -1,17 +1,12 @@
-const blueprint = require('@onehilltech/blueprint');
-const User = require('../models/User');
+var blueprint = require ('@onehilltech/blueprint')
+  , mongodb   = require ('@onehilltech/blueprint-mongodb')
+  , ResourceController = mongodb.ResourceController
+  , User   = require ('../models/User')
+  ;
 
-class LoginController {
-  constructor() {
-    blueprint.BaseController.call(this, {model: User});
-  }
-
-  login() {
-    return (req, res) => {
-      // do nothing
-    };
-  }
+function LoginController () {
+  ResourceController.call(this, {model: User});
 }
 
-blueprint.controller(LoginController, blueprint.BaseController);
+blueprint.controller (LoginController, ResourceController);
 module.exports = exports = LoginController;
