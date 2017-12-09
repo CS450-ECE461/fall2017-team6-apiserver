@@ -9,6 +9,7 @@ const schema = new mongodb.Schema({
   gender: {type: String, required: true},
   carMake: {type: String, required: true},
   carModel: {type: String, required: true},
+  carYear: {type: String, required: true},
   carMiles: {type: Number, required: true},
   _id: {type: String, required: true},
 });
